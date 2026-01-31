@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="portfolioPageTitle">Portfolio — PortFolio Forge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style id="portfolioThemeStyle">
+    /* Theme variables injected by portfolio.js */
+  </style>
+</head>
+<body class="page-portfolio">
+
+  <!-- TOP BAR (editor toolbar) -->
+  <div class="portfolio-toolbar">
+    <a href="form.html" class="btn-ghost btn-sm">← Edit</a>
+    <span class="toolbar-title">Portfolio Preview</span>
+    <div class="toolbar-actions">
+      <button class="btn-ghost btn-sm" id="downloadBtn">⬇ Download HTML</button>
+      <button class="btn-primary btn-sm" id="shareBtn">Share</button>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO OUTPUT -->
+  <div class="portfolio-wrapper" id="portfolioWrapper">
+
+    <!-- HERO / HEADER -->
+    <header class="pf-header" id="pf-header">
+      <div class="pf-header-bg"></div>
+      <div class="pf-header-content">
+        <div class="pf-avatar" id="pf-avatar">
+          <!-- Initials avatar -->
+        </div>
+        <h1 class="pf-name" id="pf-name"></h1>
+        <p class="pf-title" id="pf-title"></p>
+        <p class="pf-location" id="pf-location"></p>
+        <div class="pf-socials" id="pf-socials"></div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="pf-section pf-about">
+      <div class="pf-section-inner">
+        <div class="pf-section-label">About Me</div>
+        <p class="pf-bio" id="pf-bio"></p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="pf-section pf-skills">
+      <div class="pf-section-inner">
+        <div class="pf-section-label">Skills & Expertise</div>
+        <div class="pf-skills-grid" id="pf-skills"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="pf-section pf-projects">
+      <div class="pf-section-inner">
+        <div class="pf-section-label">Featured Projects</div>
+        <div class="pf-projects-grid" id="pf-projects"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="pf-section pf-contact">
+      <div class="pf-section-inner">
+        <h2 class="pf-contact-title">Let's work together</h2>
+        <p class="pf-contact-sub">I'm always open to new opportunities and collaborations.</p>
+        <div class="pf-contact-links" id="pf-contact"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pf-footer">
+      <span class="pf-footer-text">Generated with <span class="pf-heart">♥</span> by PortFolio Forge</span>
+    </footer>
+  </div>
+
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

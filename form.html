@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PortFolio Forge — Create Your Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-form">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">PF<span class="logo-accent">.</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="btn-ghost btn-sm">← Back</a>
+    </div>
+  </nav>
+
+  <!-- FORM PAGE -->
+  <section class="form-page">
+    <div class="form-container">
+
+      <!-- Progress indicator -->
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <span class="ps-num">1</span><span class="ps-label">Identity</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <span class="ps-num">2</span><span class="ps-label">Skills</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <span class="ps-num">3</span><span class="ps-label">Projects</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <span class="ps-num">4</span><span class="ps-label">Generate</span>
+        </div>
+      </div>
+
+      <!-- Step Panels -->
+      <!-- STEP 1: Identity -->
+      <div class="form-step active" id="step-1">
+        <div class="step-header">
+          <h2>Tell us about <em>you</em></h2>
+          <p class="step-desc">This is the foundation of your portfolio. Be genuine.</p>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full Name <span class="req">*</span></label>
+            <input type="text" id="fullName" placeholder="Alex Johnson" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="jobTitle">Job Title / Role <span class="req">*</span></label>
+            <input type="text" id="jobTitle" placeholder="Senior Product Designer" autocomplete="off" />
+          </div>
+          <div class="field field--full">
+            <label for="bio">Short Bio <span class="req">*</span></label>
+            <textarea id="bio" rows="3" placeholder="Write 2–3 sentences about yourself, your passion and what drives you…"></textarea>
+            <span class="field-hint">Keep it under 150 words for best results.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="alex@example.com" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="San Francisco, CA" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="github">GitHub URL</label>
+            <input type="url" id="github" placeholder="https://github.com/alexjohnson" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="linkedin">LinkedIn URL</label>
+            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/alexjohnson" autocomplete="off" />
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: Skills -->
+      <div class="form-step" id="step-2">
+        <div class="step-header">
+          <h2>What can you <em>do?</em></h2>
+          <p class="step-desc">Add your top skills. We'll display them beautifully.</p>
+        </div>
+
+        <div class="skills-input-area">
+          <div class="field">
+            <label for="skillInput">Add a Skill</label>
+            <div class="skill-input-row">
+              <input type="text" id="skillInput" placeholder="e.g. JavaScript, UI Design, React…" autocomplete="off" />
+              <button type="button" class="btn-add" id="addSkillBtn">
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="skills-cloud" id="skillsCloud">
+            <!-- Skills inserted by JS -->
+          </div>
+        </div>
+
+        <!-- Suggested skills -->
+        <div class="suggestions">
+          <span class="suggestion-label">Popular:</span>
+          <span class="suggestion-tag" data-skill="JavaScript">JavaScript</span>
+          <span class="suggestion-tag" data-skill="Python">Python</span>
+          <span class="suggestion-tag" data-skill="UI/UX Design">UI/UX Design</span>
+          <span class="suggestion-tag" data-skill="React">React</span>
+          <span class="suggestion-tag" data-skill="Node.js">Node.js</span>
+          <span class="suggestion-tag" data-skill="Data Analysis">Data Analysis</span>
+          <span class="suggestion-tag" data-skill="Project Management">Project Management</span>
+          <span class="suggestion-tag" data-skill="Communication">Communication</span>
+        </div>
+      </div>
+
+      <!-- STEP 3: Projects -->
+      <div class="form-step" id="step-3">
+        <div class="step-header">
+          <h2>Show your <em>work</em></h2>
+          <p class="step-desc">Add up to 3 projects that represent your best work.</p>
+        </div>
+
+        <div class="projects-list" id="projectsList">
+          <div class="project-card" data-index="0">
+            <div class="project-card-header">
+              <span class="project-num">Project 01</span>
+              <button type="button" class="btn-remove-project" style="display:none">✕</button>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label>Project Name <span class="req">*</span></label>
+                <input type="text" class="proj-name" placeholder="E-Commerce Platform" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label>Live URL</label>
+                <input type="url" class="proj-url" placeholder="https://myproject.com" autocomplete="off" />
+              </div>
+              <div class="field field--full">
+                <label>Description</label>
+                <textarea class="proj-desc" rows="2" placeholder="Brief description of the project, your role and impact…"></textarea>
+              </div>
+              <div class="field field--full">
+                <label>Technologies Used</label>
+                <input type="text" class="proj-tech" placeholder="React, Node.js, MongoDB" autocomplete="off" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-add-project" id="addProjectBtn">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          Add Another Project
+        </button>
+      </div>
+
+      <!-- STEP 4: Generate -->
+      <div class="form-step" id="step-4">
+        <div class="step-header">
+          <h2>Ready to <em>generate?</em></h2>
+          <p class="step-desc">Review your info and choose a theme.</p>
+        </div>
+
+        <div class="theme-picker">
+          <label class="theme-label">Choose a Theme</label>
+          <div class="themes">
+            <label class="theme-option active" data-theme="dark">
+              <div class="theme-preview tp-dark"></div>
+              <span>Dark Elite</span>
+            </label>
+            <label class="theme-option" data-theme="light">
+              <div class="theme-preview tp-light"></div>
+              <span>Light Minimal</span>
+            </label>
+            <label class="theme-option" data-theme="ocean">
+              <div class="theme-preview tp-ocean"></div>
+              <span>Ocean Deep</span>
+            </label>
+            <label class="theme-option" data-theme="forest">
+              <div class="theme-preview tp-forest"></div>
+              <span>Forest Calm</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="summary-box" id="summaryBox">
+          <!-- Filled by JS on step entry -->
+        </div>
+
+        <button type="button" class="btn-generate" id="generateBtn">
+          <span class="gen-text">Generate My Portfolio</span>
+          <span class="gen-loading" style="display:none">
+            <span class="gen-spinner"></span> Crafting…
+          </span>
+        </button>
+      </div>
+
+      <!-- NAV BUTTONS -->
+      <div class="form-nav">
+        <button type="button" class="btn-ghost btn-sm" id="prevBtn" style="visibility:hidden">← Previous</button>
+        <button type="button" class="btn-primary btn-sm" id="nextBtn">Next Step →</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
